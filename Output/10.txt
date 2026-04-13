@@ -1,0 +1,280 @@
+
+Database changed
++----------------+
+| Database Ready |
++----------------+
+| Database Ready |
++----------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
++----------------+
+| Tables Created |
++----------------+
+| Tables Created |
++----------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
++---------------+
+| Indexes Added |
++---------------+
+| Indexes Added |
++---------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
++------------------+
+| Triggers Created |
++------------------+
+| Triggers Created |
++------------------+
+1 row in set (0.00 sec)
+
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.01 sec)
+
++--------------+
+| View Created |
++--------------+
+| View Created |
++--------------+
+1 row in set (0.00 sec)
+
++---------------------+
+| Transaction Started |
++---------------------+
+| Transaction Started |
++---------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++-----------------------+
+| Transaction Completed |
++-----------------------+
+| Transaction Completed |
++-----------------------+
+1 row in set (0.00 sec)
+
++-----------------+
+| Customers Table |
++-----------------+
+| Customers Table |
++-----------------+
+1 row in set (0.00 sec)
+
++-------------+---------+-------------------+------------+---------------------+
+| customer_id | name    | email             | phone      | created_at          |
++-------------+---------+-------------------+------------+---------------------+
+|           1 | Vaibhav | vaibhav@gmail.com | 9999999999 | 2026-04-13 17:12:29 |
+|           2 | Amit    | amit@gmail.com    | 8888888888 | 2026-04-13 17:12:29 |
+|           3 | Riya    | riya@gmail.com    | 7777777777 | 2026-04-13 17:12:29 |
++-------------+---------+-------------------+------------+---------------------+
+3 rows in set (0.00 sec)
+
++-------------------------------------+
+| Products Table (Check Stock Update) |
++-------------------------------------+
+| Products Table (Check Stock Update) |
++-------------------------------------+
+1 row in set (0.00 sec)
+
++------------+----------+----------+-------+---------------------+
+| product_id | name     | price    | stock | created_at          |
++------------+----------+----------+-------+---------------------+
+|          1 | Laptop   | 50000.00 |     9 | 2026-04-13 17:12:29 |
+|          2 | Mouse    |   500.00 |    48 | 2026-04-13 17:12:29 |
+|          3 | Keyboard |  1500.00 |    30 | 2026-04-13 17:12:29 |
+|          4 | Monitor  | 12000.00 |    20 | 2026-04-13 17:12:29 |
++------------+----------+----------+-------+---------------------+
+4 rows in set (0.00 sec)
+
++--------------+
+| Orders Table |
++--------------+
+| Orders Table |
++--------------+
+1 row in set (0.00 sec)
+
++----------+-------------+---------------------+---------+
+| order_id | customer_id | order_date          | status  |
++----------+-------------+---------------------+---------+
+|        1 |           1 | 2026-04-13 17:12:29 | Pending |
++----------+-------------+---------------------+---------+
+1 row in set (0.00 sec)
+
++--------------------+
+| OrderDetails Table |
++--------------------+
+| OrderDetails Table |
++--------------------+
+1 row in set (0.00 sec)
+
++-----------------+----------+------------+----------+----------+
+| order_detail_id | order_id | product_id | quantity | price    |
++-----------------+----------+------------+----------+----------+
+|               1 |        1 |          1 |        1 | 50000.00 |
+|               2 |        1 |          2 |        2 |   500.00 |
++-----------------+----------+------------+----------+----------+
+2 rows in set (0.00 sec)
+
++----------------+
+| Payments Table |
++----------------+
+| Payments Table |
++----------------+
+1 row in set (0.00 sec)
+
++------------+----------+----------+----------------+---------------------+
+| payment_id | order_id | amount   | payment_status | payment_date        |
++------------+----------+----------+----------------+---------------------+
+|          1 |        1 | 51000.00 | Success        | 2026-04-13 17:12:29 |
++------------+----------+----------+----------------+---------------------+
+1 row in set (0.00 sec)
+
++-----------------------------+
+| Logs Table (Trigger Output) |
++-----------------------------+
+| Logs Table (Trigger Output) |
++-----------------------------+
+1 row in set (0.00 sec)
+
++--------+-----------------------------+---------------------+
+| log_id | message                     | created_at          |
++--------+-----------------------------+---------------------+
+|      1 | Stock updated for product 1 | 2026-04-13 16:53:14 |
+|      2 | Stock updated for product 2 | 2026-04-13 16:53:14 |
+|      3 | Stock updated for product 1 | 2026-04-13 16:54:46 |
+|      4 | Stock updated for product 2 | 2026-04-13 16:54:46 |
+|      5 | Stock updated for product 1 | 2026-04-13 17:05:12 |
+|      6 | Stock updated for product 2 | 2026-04-13 17:05:12 |
+|      7 | Stock updated for product 1 | 2026-04-13 17:12:29 |
+|      8 | Stock updated for product 2 | 2026-04-13 17:12:29 |
++--------+-----------------------------+---------------------+
+8 rows in set (0.00 sec)
+
++--------------------+
+| Order Summary View |
++--------------------+
+| Order Summary View |
++--------------------+
+1 row in set (0.00 sec)
+
++----------+---------------+--------------+
+| order_id | customer_name | total_amount |
++----------+---------------+--------------+
+|        1 | Vaibhav       |     51000.00 |
++----------+---------------+--------------+
+1 row in set (0.00 sec)
+
++---------------------------+
+| Index Test - Email Search |
++---------------------------+
+| Index Test - Email Search |
++---------------------------+
+1 row in set (0.00 sec)
+
++----+-------------+-----------+------------+-------+--------------------------+-------+---------+-------+------+----------+-------+
+| id | select_type | table     | partitions | type  | possible_keys            | key   | key_len | ref   | rows | filtered | Extra |
++----+-------------+-----------+------------+-------+--------------------------+-------+---------+-------+------+----------+-------+
+|  1 | SIMPLE      | Customers | NULL       | const | email,idx_customer_email | email | 403     | const |    1 |   100.00 | NULL  |
++----+-------------+-----------+------------+-------+--------------------------+-------+---------+-------+------+----------+-------+
+1 row in set, 1 warning (0.00 sec)
+
++---------------------------+
+| Index Test - Product Name |
++---------------------------+
+| Index Test - Product Name |
++---------------------------+
+1 row in set (0.00 sec)
+
++----+-------------+----------+------------+------+------------------+------------------+---------+-------+------+----------+-------+
+| id | select_type | table    | partitions | type | possible_keys    | key              | key_len | ref   | rows | filtered | Extra |
++----+-------------+----------+------------+------+------------------+------------------+---------+-------+------+----------+-------+
+|  1 | SIMPLE      | Products | NULL       | ref  | idx_product_name | idx_product_name | 402     | const |    1 |   100.00 | NULL  |
++----+-------------+----------+------------+------+------------------+------------------+---------+-------+------+----------+-------+
+1 row in set, 1 warning (0.00 sec)
+
++-------------------------------+
+| Index Test - Join Performance |
++-------------------------------+
+| Index Test - Join Performance |
++-------------------------------+
+1 row in set (0.00 sec)
+
++----+-------------+-------+------------+--------+--------------------+--------------------+---------+----------------------------+------+----------+--------------------------+
+| id | select_type | table | partitions | type   | possible_keys      | key                | key_len | ref                        | rows | filtered | Extra                    |
++----+-------------+-------+------------+--------+--------------------+--------------------+---------+----------------------------+------+----------+--------------------------+
+|  1 | SIMPLE      | o     | NULL       | index  | idx_order_customer | idx_order_customer | 5       | NULL                       |    1 |   100.00 | Using where; Using index |
+|  1 | SIMPLE      | c     | NULL       | eq_ref | PRIMARY            | PRIMARY            | 4       | ecommerce_db.o.customer_id |    1 |   100.00 | NULL                     |
++----+-------------+-------+------------+--------+--------------------+--------------------+---------+----------------------------+------+----------+--------------------------+
+2 rows in set, 1 warning (0.00 sec)
+
++--------------------------------------------+
+| Trigger Test - Should Fail (High Quantity) |
++--------------------------------------------+
+| Trigger Test - Should Fail (High Quantity) |
++--------------------------------------------+
+1 row in set (0.00 sec)
+
+ERROR 1644 (45000): Not enough stock!

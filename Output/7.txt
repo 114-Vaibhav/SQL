@@ -1,0 +1,103 @@
+mysql> source 7 Window Functions and Ranking.sql
+Database changed
++----+------------+-----------+-------------------+---------+---------------+-----------------+
+| id | first_name | last_name | email             | salary  | department_id | department_rank |
++----+------------+-----------+-------------------+---------+---------------+-----------------+
+|  2 | SAKSHI     | KATIYAR   | SK@example.com    | 6000.00 |             1 |               1 |
+|  9 | AMAN       | KUMAR     | 345@GFA.COM       | 6000.00 |             1 |               1 |
+|  1 | VAIBHAV    | GUPTA     | VG@example.com    | 5000.00 |             1 |               3 |
+|  4 | KUSHAL     | GUPTA     | kUSHAL@GUPTA.COM  | 8000.00 |             2 |               1 |
+| 10 | ALLU       | K         | 444@GFA.COM       | 8000.00 |             2 |               1 |
+|  3 | AKSHAY     | GUPTA     | 2Fj5o@example.com | 7000.00 |             2 |               3 |
+|  5 | VISHAL     | MITTAL    | VISHAL@GUPTA.COM  | 9000.00 |             3 |               1 |
+|  6 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |               1 |
+|  7 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |               1 |
+|  8 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |               1 |
+| 11 | ARJUN      | KUMAR     | V44@GFA.COM       | 6000.00 |             3 |               5 |
++----+------------+-----------+-------------------+---------+---------------+-----------------+
+11 rows in set (0.00 sec)
+
++----+------------+-----------+-------------------+---------+---------------+-----------------------+
+| id | first_name | last_name | email             | salary  | department_id | department_DENSE_rank |
++----+------------+-----------+-------------------+---------+---------------+-----------------------+
+|  2 | SAKSHI     | KATIYAR   | SK@example.com    | 6000.00 |             1 |                     1 |
+|  9 | AMAN       | KUMAR     | 345@GFA.COM       | 6000.00 |             1 |                     1 |
+|  1 | VAIBHAV    | GUPTA     | VG@example.com    | 5000.00 |             1 |                     2 |
+|  4 | KUSHAL     | GUPTA     | kUSHAL@GUPTA.COM  | 8000.00 |             2 |                     1 |
+| 10 | ALLU       | K         | 444@GFA.COM       | 8000.00 |             2 |                     1 |
+|  3 | AKSHAY     | GUPTA     | 2Fj5o@example.com | 7000.00 |             2 |                     2 |
+|  5 | VISHAL     | MITTAL    | VISHAL@GUPTA.COM  | 9000.00 |             3 |                     1 |
+|  6 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |                     1 |
+|  7 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |                     1 |
+|  8 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |                     1 |
+| 11 | ARJUN      | KUMAR     | V44@GFA.COM       | 6000.00 |             3 |                     2 |
++----+------------+-----------+-------------------+---------+---------------+-----------------------+
+11 rows in set (0.00 sec)
+
++----+------------+-----------+-------------------+---------+---------------+-----------------------+
+| id | first_name | last_name | email             | salary  | department_id | department_ROW_NUMBER |
++----+------------+-----------+-------------------+---------+---------------+-----------------------+
+|  2 | SAKSHI     | KATIYAR   | SK@example.com    | 6000.00 |             1 |                     1 |
+|  9 | AMAN       | KUMAR     | 345@GFA.COM       | 6000.00 |             1 |                     2 |
+|  1 | VAIBHAV    | GUPTA     | VG@example.com    | 5000.00 |             1 |                     3 |
+|  4 | KUSHAL     | GUPTA     | kUSHAL@GUPTA.COM  | 8000.00 |             2 |                     1 |
+| 10 | ALLU       | K         | 444@GFA.COM       | 8000.00 |             2 |                     2 |
+|  3 | AKSHAY     | GUPTA     | 2Fj5o@example.com | 7000.00 |             2 |                     3 |
+|  5 | VISHAL     | MITTAL    | VISHAL@GUPTA.COM  | 9000.00 |             3 |                     1 |
+|  6 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |                     2 |
+|  7 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |                     3 |
+|  8 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |                     4 |
+| 11 | ARJUN      | KUMAR     | V44@GFA.COM       | 6000.00 |             3 |                     5 |
++----+------------+-----------+-------------------+---------+---------------+-----------------------+
+11 rows in set (0.00 sec)
+
++----+------------+-----------+-------------------+---------+---------------+-------------------------+
+| id | first_name | last_name | email             | salary  | department_id | department_PERCENT_rank |
++----+------------+-----------+-------------------+---------+---------------+-------------------------+
+|  2 | SAKSHI     | KATIYAR   | SK@example.com    | 6000.00 |             1 |                       0 |
+|  9 | AMAN       | KUMAR     | 345@GFA.COM       | 6000.00 |             1 |                       0 |
+|  1 | VAIBHAV    | GUPTA     | VG@example.com    | 5000.00 |             1 |                       1 |
+|  4 | KUSHAL     | GUPTA     | kUSHAL@GUPTA.COM  | 8000.00 |             2 |                       0 |
+| 10 | ALLU       | K         | 444@GFA.COM       | 8000.00 |             2 |                       0 |
+|  3 | AKSHAY     | GUPTA     | 2Fj5o@example.com | 7000.00 |             2 |                       1 |
+|  5 | VISHAL     | MITTAL    | VISHAL@GUPTA.COM  | 9000.00 |             3 |                       0 |
+|  6 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |                       0 |
+|  7 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |                       0 |
+|  8 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |                       0 |
+| 11 | ARJUN      | KUMAR     | V44@GFA.COM       | 6000.00 |             3 |                       1 |
++----+------------+-----------+-------------------+---------+---------------+-------------------------+
+11 rows in set (0.00 sec)
+
++----+------------+-----------+-------------------+---------+---------------+-------------+
+| id | first_name | last_name | email             | salary  | department_id | next_salary |
++----+------------+-----------+-------------------+---------+---------------+-------------+
+|  2 | SAKSHI     | KATIYAR   | SK@example.com    | 6000.00 |             1 |     6000.00 |
+|  9 | AMAN       | KUMAR     | 345@GFA.COM       | 6000.00 |             1 |     5000.00 |
+|  1 | VAIBHAV    | GUPTA     | VG@example.com    | 5000.00 |             1 |        NULL |
+|  4 | KUSHAL     | GUPTA     | kUSHAL@GUPTA.COM  | 8000.00 |             2 |     8000.00 |
+| 10 | ALLU       | K         | 444@GFA.COM       | 8000.00 |             2 |     7000.00 |
+|  3 | AKSHAY     | GUPTA     | 2Fj5o@example.com | 7000.00 |             2 |        NULL |
+|  5 | VISHAL     | MITTAL    | VISHAL@GUPTA.COM  | 9000.00 |             3 |     9000.00 |
+|  6 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |     9000.00 |
+|  7 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |     9000.00 |
+|  8 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |     6000.00 |
+| 11 | ARJUN      | KUMAR     | V44@GFA.COM       | 6000.00 |             3 |        NULL |
++----+------------+-----------+-------------------+---------+---------------+-------------+
+11 rows in set (0.00 sec)
+
++----+------------+-----------+-------------------+---------+---------------+-----------------+
+| id | first_name | last_name | email             | salary  | department_id | previous_salary |
++----+------------+-----------+-------------------+---------+---------------+-----------------+
+|  2 | SAKSHI     | KATIYAR   | SK@example.com    | 6000.00 |             1 |            NULL |
+|  9 | AMAN       | KUMAR     | 345@GFA.COM       | 6000.00 |             1 |         6000.00 |
+|  1 | VAIBHAV    | GUPTA     | VG@example.com    | 5000.00 |             1 |         6000.00 |
+|  4 | KUSHAL     | GUPTA     | kUSHAL@GUPTA.COM  | 8000.00 |             2 |            NULL |
+| 10 | ALLU       | K         | 444@GFA.COM       | 8000.00 |             2 |         8000.00 |
+|  3 | AKSHAY     | GUPTA     | 2Fj5o@example.com | 7000.00 |             2 |         8000.00 |
+|  5 | VISHAL     | MITTAL    | VISHAL@GUPTA.COM  | 9000.00 |             3 |            NULL |
+|  6 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |         9000.00 |
+|  7 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |         9000.00 |
+|  8 | VSDF       | KUMAR     | VSDFL@GFA.COM     | 9000.00 |             3 |         9000.00 |
+| 11 | ARJUN      | KUMAR     | V44@GFA.COM       | 6000.00 |             3 |         9000.00 |
++----+------------+-----------+-------------------+---------+---------------+-----------------+
+11 rows in set (0.00 sec)
